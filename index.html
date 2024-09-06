@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabari Textiles</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
+
+
+   <style>
+        /* .scroll-element {
+    opacity: 0;
+    transition: all 1s ease-out;
+    will-change: opacity, transform;
+}
+
+.fade-in {
+    transform: translateY(20px);
+}
+
+.slide-in-left {
+    transform: translateX(-50px);
+}
+
+.slide-in-right {
+    transform: translateX(50px);
+}
+
+.zoom-in {
+    transform: scale(0.9);
+}
+
+.show {
+    opacity: 1;
+    transform: translateX(0) translateY(0) scale(1);
+} */
+
+       /* Custom styling for the carousel */
+  .carousel-item {
+    height: 50vh;
+    min-height: 400px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 1s ease-in-out;
+  }
+
+  .carousel-item.active {
+    transform: scale(1.1);
+  }
+
+  /* Centered text styling */
+  .carousel-caption {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+  }
+  .carousel-caption h5 {
+      font-size: 3rem;
+      width: 100%;
+      font-weight: bolder;
+      opacity: 0.9; 
+      color: rgba(255, 255, 255, 0.9);
+      -webkit-text-stroke: 1px black; /* Outline the text */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Shadow for depth */
+  /* font-weight: bold; */
+  padding: 5px; /* Padding for spacing around text */
+     
+
+    }
+
+    .carousel-caption p {
+      font-size: 2rem;
+      font-weight: bold;
+      opacity: 0.8; 
+      /* color: rgba(255, 255, 255, 0.9); */
+      /* -webkit-text-stroke: 1px black; Outline the text */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Shadow for depth */
+  /* font-weight: bold; */
+  padding: 5px; /* Padding for spacing around text */
+     
+    }
+    
+
+  /* Responsive styling */
+  @media (max-width: 768px) {
+    .carousel-caption h5 {
+      font-size: 2rem;
+    }
+
+    .carousel-caption p {
+      font-size: 1.25rem;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .carousel-caption h5 {
+      font-size: 1.5rem;
+    }
+
+    .carousel-caption p {
+      font-size: 1rem;
+    }
+  }
+
+  /* Animations */
+  .carousel-caption h5,
+  .carousel-caption p {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+  }
+
+  .carousel-item.active .carousel-caption h5,
+  .carousel-item.active .carousel-caption p {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .img-fluid{ height: 400px;
+  width: 400px;
+  margin-top: 30px;
+  border-radius: 10px;
+  border: 1px solid black;
+  opacity: 1;
+}
+
+
+    </style>
+        
+</head>
+<body>
+    <section class="main">
+    <header>
+        <div class="logo"><span class="Sabari"style="font-family:'Colonna MT Std', serif;" >Sabari Textiles <br><span class="slogan">From Loom to Living</span></span> <img class="logo-img" src="image/logo.png" height="90px" width="90px" alt=""></div>
+    </header>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link" >About</a></li>
+            <li class="dropdown">
+                <a href="catagreas.html" class="dropbtn">Products</a>
+                <ul class="dropdown-content">
+                    <li><a href="living.html"class="nav-link" >Living Textiles</a></li>
+                    <li><a href="table.html"class="nav-link">Table Textiles</a></li>
+                    <li><a href="Kitchen.html"class="nav-link">Kitchen Textiles</a></li>
+                    <li><a href="Handloom-Mats.html"class="nav-link">Handloom-Mats Textiles</a></li>
+                </ul>
+            </li>
+            <li><a href="fasility.html"class="nav-link">Facilities</a></li>
+            <li><a href="contact.html"class="nav-link">Contact Us</a></li>
+        </ul>
+        <div class="logo1">Sabari Textiles</div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+    <div id="landingCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" style="background-image: url('image/slide1.png');">
+            <div class="carousel-caption">
+              <h5 style="color: rgba(255, 255, 255, 1);">Manufacturers and Exporters</h5>
+              <p class="silde1" style="color:red;" >Furnishing Textiles</p>
+            </div>
+          </div>
+          <div class="carousel-item" style="background-image: url('image/slider2.jpeg');">
+            <div class="carousel-caption">
+              <h5 style="color: rgba(255, 255, 255, 1);">Your Luxury Homes</h5>
+              <p class="silde2" style="color:aqua;">With beautiful furnishing product</p>
+            </div>
+          </div>
+          <div class="carousel-item" style="background-image: url('image/slide3.jpeg');">
+            <div class="carousel-caption">
+              <h5>Furnishing Intergrated Set-Up</h5>
+              <p class="silde3" style="color:orange;">Yarn-Weaving-Processing-Manufacturing</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#landingCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#landingCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+ 
+    <div class="intro">
+        <div class="container">
+           <div class="row">
+              
+               <dir class="col-xl-6 col-lg-6 col-md-12 col-sm-12 " >
+                 <div class="intro_box ">
+                    
+                    <h2>Introduction</h2>
+                    <p>
+                        Welcome to Sabari Textiles
+with over three decades of experience in the textile manufacturing industry, Sabari Textiles is a name synonymous with quality and innovation. From our humble beginnings in Karur, Tamil Nadu, India, we have grown into a trusted provider of premium home textiles for international markets. We invite you to explore our range of meticulously crafted textiles and experience the difference that our rich heritage and unwavering dedication can make in your home.
+                    </p>
+                 </div>
+              </dir>
+              <dir class="col-xl-6 col-lg-6 col-md-12 col-sm-12"data-aos="fade-left">
+                <div class="image-container">
+                   <img src="image/intro.png" alt="Moving Image" class="moving-image intro-img">
+               </div>
+              </dir> 
+           </div>
+        </div>
+     </div>
+     <!-- <div class="Facilities-Sections1 ">
+        <div class="container">
+        <div class="row align-items-center  flex-md-row-reverse">
+            <div class="col-md-6 text-center">
+                <img src="image/intro.png" alt="Yarn Dyeing" class="img-fluid facility-image">
+            </div>
+            <div class="col-md-6">
+                <div class="content-box">
+                    <h2>Introduction</h2>
+                    <p>
+                        Welcome to Sabari Textiles
+                            with over three decades of experience in the textile manufacturing industry, Sabari Textiles is a name synonymous with quality and innovation. From our humble beginnings in Karur, Tamil Nadu, India, we have grown into a trusted provider of premium home textiles for international markets. We invite you to explore our range of meticulously crafted textiles and experience the difference that our rich heritage and unwavering dedication can make in your home.
+                                            
+                    
+                    </p>
+                </div>
+            </div>
+        </div>
+       </div>
+       </div> -->
+    </section>
+
+
+    <div class="about" id="about">
+        <div class="container">
+           <div class="row">
+            <dir class="col-xl-6 col-lg-6 col-md-12 col-sm-12" data-aos="fade-right">
+                <div class="image-container">
+                   <img src="image/about.png" alt="Moving Image" class="moving-image about-img">
+               </div>
+              </dir>
+               <dir class="col-xl-6 col-lg-6 col-md-12 col-sm-12" data-aos="fade-right">
+                 <div class="about_box">
+                    <h2>About Us</h2>
+                    <p>
+                        With over three decades of experience in the textile manufacturing industry,
+                        Sabari Textiles remains synonymous with quality and innovation.
+                        From our humble beginnings in Karur, Tamil Nadu, India, we have
+                        grown into a trusted provider of premium home textiles and apparel fabrics
+                        for international markets.
+                    </p>
+                 </div>
+              </dir> 
+              
+           </div>
+        </div>
+     </div>
+
+ 
+     
+    <div class="products">
+        <div class="container">
+           <div class="row">
+              
+               <dir class="col-xl-6 col-lg-6 col-md-12 col-sm-12" data-aos="fade-left">
+                 <div class="product_box">
+                    <h2>Products</h2>
+            <p>
+                Our products categories include: <br> <br>
+                <ul>
+             <li>Kitchen Textiles – Tea Towels, Mittens, Potholder, Apron, Dishcloth.</li>   
+             <li>  Living Textiles - Curtains, Bed Spread, Bath Towels, Pillow, Pillow Covers, Cushions, Cushion Covers, Beach Mattress, Beach Towels, Floor Mat</li> 
+              <li>  Table Textiles - Table Cloth, Placements, Table Runner, Napkins, Bread Bag, Breadbasket.</li> 
+              <li>  Handloom Mats- Bamboo Mats, River grass Mats, Straw Mats, Broom Mats.</li> 
+            </ul>  </p>
+                 </div>
+              </dir>
+              <dir class="col-xl-6 col-lg-6 col-md-12 col-sm-12" data-aos="fade-right">
+                <div class="image-container">
+                   <img src="image/products.png" alt="Moving Image" class="moving-image product-img">
+               </div>
+              </dir> 
+           </div>
+        </div>
+     </div>
+
+<!-- fasilty -->
+
+
+    <div class="container my-5">
+        <h2>Facilities</h2>
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6 scroll-element zoom-in">
+                <div class="card p-4 text-center">
+                    <img src="image/yaning.png" alt="Image 1" class="img-fluid mb-3">
+                    
+                    <a href="fasility.html" class="btn btn-primary">Yarn</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 scroll-element zoom-in">
+                <div class="card p-4 text-center">
+                    <img src="image/waving.png" alt="Image 2" class="img-fluid mb-3">
+                  
+                    <a href="fasility.html" class="btn btn-primary">Weaving</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 scroll-element zoom-in">
+                <div class="card p-4 text-center">
+                    <img src="image/processing.png" alt="Image 2" class="img-fluid mb-3">
+                  
+                    <a href="fasility.html" class="btn btn-primary">Processing</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 scroll-element zoom-in">
+                <div class="card p-4 text-center">
+                    <img src="image/manufacter.png" alt="Image 3" class="img-fluid mb-3">
+                    
+                    <a href="fasility.html" class="btn btn-primary">Manufacturing</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+     
+
+
+
+
+
+
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4><i class="bi bi-geo-alt"></i> Our Address</h4>
+                    <p>10/195G, Naval Nagar - 2nd Cross,<br>
+                        Vennamalai (PO), Karur - 639 006,<br>
+                        Tamil Nadu, India
+                       <br>
+                       </p>
+                     <h5>  <i class="bi bi-telephone"></i>Call Us</h5>
+                          <p> +91 xxxxxxxxx</p>
+                    <!-- <p><i class="fas fa-phone"></i> +91 xxxxxxxxx</p> -->
+                        <h5><i class="bi bi-envelope"></i> Gmail </h5>
+                    <p>naveen@sabaritextiles.com   </p>
+                    <p>sabari@sabaritextiles.com  </p>
+                                                  
+                </div>
+                <div class="col-md-4">
+                    <h4>Our Location</h4>
+                    <div class="map-container">
+                        
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3917.1979140261788!2d78.09376907479438!3d10.948417455998268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s10%2F195G%2C%20Naval%20Nagar%20-%202nd%20Cross%2C%20Vennamalai%2C%20Karur%20-%20639%20006%2C%20Tamil%20Nadu%2C%20India!5e0!3m2!1sen!2sin!4v1725511469213!5m2!1sen!2sin" 
+                                width="100%" 
+                                height="250" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h4>Mail Us</h4>
+                    <form>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Message" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p>© 2024 copy write</p>
+                </div>
+            </div>
+        </div>
+    </footer> 
+    
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+//         const hamburger = document.querySelector('.hamburger');
+// const navbar = document.querySelector('.navbar');
+
+// hamburger.addEventListener('click', () => {
+//     navbar.classList.toggle('active');
+// });
+
+
+const navbar = document.querySelector('.navbar');
+const navLinks = document.querySelectorAll('.nav-link');
+const hamburger = document.querySelector('.hamburger');
+
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        navbar.classList.remove('active');
+    });
+});
+
+hamburger.addEventListener('click', () => {
+    navbar.classList.toggle('active');
+});
+
+
+
+
+
+
+
+// document.addEventListener('DOMContentLoaded', function () {
+//     const elements = document.querySelectorAll('.scroll-element');
+
+//     const scrollReveal = () => {
+//         const viewportHeight = window.innerHeight;
+
+//         elements.forEach((element) => {
+//             const elementTop = element.getBoundingClientRect().top;
+
+//             if (elementTop < viewportHeight - 100) {
+//                 element.classList.add('show');
+//             } else {
+//                 element.classList.remove('show');
+//             }
+//         });
+//     };
+
+//     window.addEventListener('scroll', scrollReveal);
+//     scrollReveal(); // Trigger once on page load
+// });
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const elements = document.querySelectorAll('.scroll-element');
+
+    const scrollReveal = () => {
+        const viewportHeight = window.innerHeight;
+
+        elements.forEach((element) => {
+            const elementTop = element.getBoundingClientRect().top;
+
+            if (elementTop < viewportHeight - 100) {
+                element.classList.add('show');
+            } else {
+                element.classList.remove('show');
+            }
+        });
+    };
+
+    window.addEventListener('scroll', scrollReveal);
+    scrollReveal(); // Trigger once on page load
+});
+
+    </script>
+</body>
+</html>
